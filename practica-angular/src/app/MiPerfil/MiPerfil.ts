@@ -7,4 +7,9 @@ import {Component} from '@angular/core';
     
 })
 
-export class MiPerfil {}
+export class MiPerfil {
+    constructor() {
+        console.log("MiPerfil component ha sido inicializado.");
+        alert("Bienvenido al perfil, estás dentro de la aplicación.");
+    }
+}
