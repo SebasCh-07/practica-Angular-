@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
+  web= "https://www.youtube.com"
+  redirigir = true;
 
+  cambiarRedirigir(){
+    this.redirigir = !this.redirigir;
+  }
 }

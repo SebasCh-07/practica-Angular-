@@ -1,1 +1,17 @@
 <p>prestamos works!</p>
+
+@if(redirigir){
+    <a [href]="web" [class.activo]="redirigir" target="_blank" style="font-size: 15px;">Ir a Web</a>
+}@else {
+    <a [href]="web" [class.activo]="redirigir" target="_blank" style="font-size: 20px;">Ir a Web</a>
+}
+
+
+@if(redirigir){
+    <p>¡El enlace funciona correctamente!</p>
+}@else {
+    <p>Lo sentimos, este enlace no esta disponible</p>
+}
+
+<button (click)="cambiarRedirigir()">Cambiar Redirigir</button>
+

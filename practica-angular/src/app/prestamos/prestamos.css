@@ -1,0 +1,11 @@
+a{
+    background-color: orange;
+    color: black;
+    padding: 15px;
+}
+
+.activo{
+    background-color: darkblue;
+    color: white;
+    padding: 15px;
+}
