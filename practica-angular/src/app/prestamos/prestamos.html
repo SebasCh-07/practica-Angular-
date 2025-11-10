@@ -27,3 +27,19 @@
     <li>LA lista esta vacia</li>
 }
 
+@switch (prestamo.tipo) {
+    @case('personal'){
+        <p>Prestamo Personal</p>
+    }
+    @case('hipotecario'){
+        <p>Prestamo Hipotecario</p>
+        <app-transacciones></app-transacciones>
+    }
+     @case('vehicular'){
+        <p>Prestamo vehicular</p>
+    }
+    @default{
+        <p>Tipo de prestamo no reconocido</p>
+    }
+}
+

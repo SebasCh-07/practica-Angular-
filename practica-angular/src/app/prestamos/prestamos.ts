@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [],
+  imports: [Transacciones],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
@@ -18,6 +19,14 @@ export class Prestamos {
     {id: 5, monto: 500, estado: "Aprobado", valor: true},
     {id: 6, monto: 500, estado: "Pendiente", valor: false},
   ];
+
+  prestamo = {
+    id: 1,
+    //tipo: "personal",
+    //tipo: "hipotecario",
+    tipo: "vehicular",
+    interes: 5.5
+  }
 
   cambiarRedirigir(){
     this.redirigir = !this.redirigir;
