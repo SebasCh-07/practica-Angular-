@@ -19,6 +19,7 @@ export class MiPerfil {
     public edad: number;
     public ocupacion: string;
     public direccion: string;
+    public mostrarCuenta: boolean = true;
 
     constructor() {
         this.user = "S3B45";
@@ -41,5 +42,8 @@ export class MiPerfil {
     }
     cambiarDireccion() {
         this.direccion = "Avenida Siempre Viva 742, Ciudad, País";
+    }
+    ocultarCuenta(valor: boolean) {
+        this.mostrarCuenta = valor;
     }
 }

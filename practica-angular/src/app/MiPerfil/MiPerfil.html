@@ -23,6 +23,12 @@
 <button (click)="cambiarEdad()">CambiarEdad</button>
 <button (click)="cambiarDireccion()">cambiarDireccion</button>
 
+@if(mostrarCuenta){
+    <button (click)="ocultarCuenta(false)">Ocultar Cuenta</button>
+}@else {
+    <button (click)="ocultarCuenta(true)">Mostrar Cuenta</button>
+}
+
+@if(mostrarCuenta){
 <app-cuenta></app-cuenta>
-<app-prestamos></app-prestamos>
-<app-transacciones></app-transacciones>
+}
