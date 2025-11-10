@@ -15,3 +15,15 @@
 
 <button (click)="cambiarRedirigir()">Cambiar Redirigir</button>
 
+<h3>Prestamos</h3>
+
+@for(prestamo of prestamosList; track prestamo.id;){
+    @if(prestamo.valor){
+        <li style="background-color: lightgreen; padding: 15px;">{{prestamo.monto}} {{prestamo.estado}}</li>
+    } @else {
+        <li style="background-color: red; color: white;padding: 15px;">{{prestamo.monto}} {{prestamo.estado}}</li>
+    }
+} @empty {
+    <li>LA lista esta vacia</li>
+}
+
