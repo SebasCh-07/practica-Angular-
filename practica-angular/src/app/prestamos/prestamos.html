@@ -1,5 +1,6 @@
 <p>prestamos works!</p>
 
+
 @if(redirigir){
     <a [href]="web" [class.activo]="redirigir" target="_blank" style="font-size: 15px;">Ir a Web</a>
 }@else {
@@ -42,4 +43,15 @@
         <p>Tipo de prestamo no reconocido</p>
     }
 }
+ <h1>Pipes / Tuberias</h1>
+ <div>{{saludo | lowercase}} </div>
+ <div>{{despedida | uppercase}} </div>
+ <div>{{auto | titlecase}}</div>
+ <div>{{cantidad | currency}}</div>
+
+
+
+
+
+
 

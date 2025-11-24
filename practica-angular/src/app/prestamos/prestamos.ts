@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
+import { UpperCasePipe, LowerCasePipe, TitleCasePipe, CurrencyPipe } from '@angular/common';
 import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones],
+  imports: [Transacciones, UpperCasePipe, LowerCasePipe, TitleCasePipe , CurrencyPipe],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
   web= "https://www.youtube.com"
+  saludo = "HOLA"
+  despedida = "adios"
+  auto = "ford"
+  cantidad = 123456789
   redirigir = true;
 
   prestamosList = [
