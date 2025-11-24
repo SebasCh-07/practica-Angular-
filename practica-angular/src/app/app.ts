@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MiPerfil } from './MiPerfil/MiPerfil';
 import { Prestamos } from './prestamos/prestamos';
+import { Transacciones } from './transacciones/transacciones';
 
 @Component({
   selector: 'app-root',
-  imports: [ Prestamos],
+  imports: [ Transacciones],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
