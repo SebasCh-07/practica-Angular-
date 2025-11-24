@@ -6,3 +6,20 @@
 }
 
 <button (click)="cambiarEstilo()">Cambiar Estilo</button>
+
+<h1>ngStyle</h1>
+<p [ngStyle]="miEstilo">Hola que tal</p>
+
+
+<h1>Cliente</h1>
+<app-cuenta></app-cuenta>
+
+<h1>Array transacciones</h1>
+<ol>
+    @for (transaccion of transacciones; track $index ) {
+    <li [ngClass]="transaccion.tipo === 'ingreso' ? 'ingreso' : 'egreso'">
+        <strong>{{ transaccion.descipcion }}</strong> -
+        Monto: {{ transaccion.monto }} -
+        Fecha: {{ transaccion.fecha | date:'dd/MM/yyyy' }}
+        }
+</ol>

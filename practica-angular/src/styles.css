@@ -14,3 +14,12 @@
     padding: 6px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.ingreso{
+    color: green;
+    font-weight: bold;
+}
+.egreso{
+    color: red;
+    font-weight: bold;
+}

@@ -16,7 +16,7 @@ export class Prestamos {
   auto = "ford"
   cantidad = 123456789
   palbra = "hola"
-  redirigir = true;
+redirigir = true
 
   prestamosList = [
     {id: 1, monto: 100, estado: "Aprobado", valor: true},
