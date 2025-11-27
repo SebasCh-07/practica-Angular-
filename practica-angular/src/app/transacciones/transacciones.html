@@ -23,3 +23,9 @@
         Fecha: {{ transaccion.fecha | date:'dd/MM/yyyy' }}
         }
 </ol>
+
+
+<h2>Reto 19</h2>
+<input type="text"[(ngModel)]="descipcionTransaccion" >
+<button (click)="mostrarTransaccion()">Mostrar Transaccion</button>
+<p>Descripcion de la transaccion: {{ descipcionTransaccion }}</p>

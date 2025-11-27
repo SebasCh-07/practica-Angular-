@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { Transaccion } from '../Models/transaccion';
 import { DatePipe } from '@angular/common';
 import { Cuenta } from '../cuenta/cuenta';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-transacciones',
-  imports: [NgClass, NgStyle, DatePipe, Cuenta],
+  imports: [NgClass, NgStyle, DatePipe, Cuenta, FormsModule],
   templateUrl: './transacciones.html',
   styleUrl: './transacciones.css',
 })
@@ -32,5 +33,15 @@ export class Transacciones {
     new Transaccion(4, new Date(2023, 5, 18), 'Compra de muebles', 1500, 'egreso'),
 
   ]
+
+  descipcionTransaccion: string = '';
+
+  ngDoCheck() {
+    console.log(this.descipcionTransaccion);
+  }
+
+  mostrarTransaccion() {
+    alert(this.descipcionTransaccion);
+  }
 
 }
