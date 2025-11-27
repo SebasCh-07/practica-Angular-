@@ -52,3 +52,12 @@
 <h1>Pipe Personalizado</h1>
 <div>Palabra: {{palbra}}</div>
 <div>Ascii: {{palbra | ascci}}</div>
+
+<h1>Eventos</h1>
+@for(prestamo of prestamosList; track prestamo.id; let i = $index){
+<li>{{prestamo.monto}} {{prestamo.estado}} <button (click)="eliminarPrestamo(i)">Borrar</button></li>
+}
+
+<input type="text" [(ngModel)]="montoString" placeholder="Monto del prestamo">
+<input type="text" [(ngModel)]="estadoPrestamo" placeholder="Estado del prestamo">
+<button (click)="addPrestamo()">Agregar Prestamo</button>

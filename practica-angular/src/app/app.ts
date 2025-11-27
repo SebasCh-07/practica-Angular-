@@ -6,7 +6,7 @@ import { Transacciones } from './transacciones/transacciones';
 
 @Component({
   selector: 'app-root',
-  imports: [ Transacciones],
+  imports: [ Prestamos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
