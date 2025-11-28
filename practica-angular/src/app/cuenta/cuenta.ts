@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Cliente } from '../Models/cleinte';
 
 @Component({
@@ -17,4 +17,6 @@ export class Cuenta {
   ngOnDestroy() {
     console.log('Cuenta component destroyed');
   }
+
+  @Input() nombreCliente: string="";
 }

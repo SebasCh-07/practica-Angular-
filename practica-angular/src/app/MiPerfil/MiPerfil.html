@@ -1,4 +1,4 @@
-<h1>USER: {{user}}</h1>
+<!--<h1>USER: {{user}}</h1>
 <div>
     <strong>Id:</strong>
     <p>{{id}}</p>
@@ -30,5 +30,10 @@
 }
 
 @if(mostrarCuenta){
-<app-cuenta></app-cuenta>
-}
+<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
+}-->
+
+
+<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
+<app-transacciones (mesajeEnviado)="recibirMensaje($event)"></app-transacciones>
+{{mensajeRecibido}}

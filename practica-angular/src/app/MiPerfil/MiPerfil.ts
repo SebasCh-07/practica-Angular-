@@ -1,14 +1,14 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Prestamos } from '../prestamos/prestamos';
 import { Cuenta } from '../cuenta/cuenta';
 import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
     selector: 'mi-perfil',
-    imports: [Cuenta],
+    imports: [Cuenta, Transacciones],
     templateUrl: "MiPerfil.html",
     styleUrl: 'MiPerfil.css'
-    
+
 })
 
 export class MiPerfil {
@@ -20,6 +20,7 @@ export class MiPerfil {
     public ocupacion: string;
     public direccion: string;
     public mostrarCuenta: boolean = true;
+
 
     constructor() {
         this.user = "S3B45";
@@ -45,5 +46,12 @@ export class MiPerfil {
     }
     ocultarCuenta(valor: boolean) {
         this.mostrarCuenta = valor;
+    }
+
+
+    nombreCliente: string = "Juan Perez"
+    mensajeRecibido: string = ""
+    recibirMensaje(mensaje: string) {
+        this.mensajeRecibido = mensaje;
     }
 }
