@@ -1,0 +1,39 @@
+<!--<h1>USER: {{user}}</h1>
+<div>
+    <strong>Id:</strong>
+    <p>{{id}}</p>
+</div>
+<div>
+    <strong>Nombre:</strong>
+    <p>{{nombre}}</p>
+</div>
+<div>
+    <strong>Edad:</strong>
+    <p>{{edad}} años</p>
+</div>
+<div>
+    <strong>Profesión:</strong>
+    <p>{{ocupacion}}</p>
+</div>
+<div>
+    <strong>Dirección:</strong>
+    <p>{{direccion}}</p>
+</div>
+
+<button (click)="cambiarEdad()">CambiarEdad</button>
+<button (click)="cambiarDireccion()">cambiarDireccion</button>
+
+@if(mostrarCuenta){
+    <button (click)="ocultarCuenta(false)">Ocultar Cuenta</button>
+}@else {
+    <button (click)="ocultarCuenta(true)">Mostrar Cuenta</button>
+}
+
+@if(mostrarCuenta){
+<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
+}-->
+
+
+<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
+<app-transacciones (mesajeEnviado)="recibirMensaje($event)"></app-transacciones>
+{{mensajeRecibido}}
